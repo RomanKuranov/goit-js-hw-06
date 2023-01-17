@@ -6,13 +6,13 @@ function getRandomHexColor() {
  const buttonDestroy = document.querySelector('[data-destroy]');
  const divBoxes = document.querySelector('#boxes');
 
-
  const createBoxes= (amount) => {
   let divBoxSize = 20;
+  const divBoxCollection =[];
 
   for (let i = 1; i <= amount; i++) {
     const divBox = document.createElement('div'); 
-  
+
     divBoxSize +=10;
     
      divBox.style.width = divBoxSize + 'px';
@@ -20,7 +20,8 @@ function getRandomHexColor() {
      divBox.textContent += `№${i}`;
      divBox.style.backgroundColor = getRandomHexColor();
 
-    divBoxes.appendChild(divBox);
+    divBoxCollection.push(divBox);
+    divBoxes.append(...divBoxCollection);
 }
  };
 

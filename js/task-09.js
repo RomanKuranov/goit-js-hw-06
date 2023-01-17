@@ -6,10 +6,10 @@ const refs = {
 
 const onButtonClick = (event) => {
   refs.spanEl.textContent = getRandomHexColor();
-  refs.bodyEl.style.backgroundColor = getRandomHexColor();
+  refs.bodyEl.style.backgroundColor = refs.spanEl.textContent;
 };
 
-function getRandomHexColor() {
+const getRandomHexColor = () => {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 };
 

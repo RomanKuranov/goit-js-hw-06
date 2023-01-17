@@ -11,10 +11,7 @@ const onFormELSubmit = (event)=> {
         return alert("Все поля должны быть заполнены");
       };
 
-     const formData = {
-        email,
-        password,
-     };
+     console.log({"Email":email.value, "Password":password.value});
      
       event.currentTarget.reset();
 };

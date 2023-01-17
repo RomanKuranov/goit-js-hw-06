@@ -21,8 +21,8 @@ function getRandomHexColor() {
      divBox.style.backgroundColor = getRandomHexColor();
 
     divBoxCollection.push(divBox);
-    divBoxes.append(...divBoxCollection);
 }
+divBoxes.append(...divBoxCollection);
  };
 
 const onButtonCreateClick = ()=> {
